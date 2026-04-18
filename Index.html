@@ -1,0 +1,35 @@
+S
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datesearch.io | Digital Safety Verification</title>
+    <style>
+        body { background-color: #0d1117; color: white; font-family: 'Inter', sans-serif; text-align: center; padding: 50px; }
+        .search-container { margin-top: 100px; }
+        input[type="text"] { padding: 15px; width: 300px; border-radius: 5px; border: none; margin-right: 10px; }
+        button { padding: 15px 30px; background-color: #238636; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        .results { margin-top: 50px; display: none; filter: blur(5px); }
+        .paywall { margin-top: 20px; display: none; border: 1px solid #30363d; padding: 20px; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <h1>DATESEARCH.IO</h1>
+    <p>Community-Powered Digital Safety Verification</p>
+    
+    <div class="search-container">
+        <input type="text" id="handleInput" placeholder="Enter Social Media Handle...">
+        <button onclick="searchHandle()">Search</button>
+    </div>
+
+    <div id="paywallArea" class="paywall">
+        <h3>1 Record Found</h3>
+        <p>A safety report has been filed for this handle.</p>
+        <button onclick="alert('Redirecting to Stripe...')">Unlock Full Report ($4.99)</button>
+    </div>
+
+    <script>
+        
